@@ -1,0 +1,8 @@
+# Deshabilitar la ejecución de scripts PHP en este directorio
+RemoveHandler .php .phtml .php3 .php4 .php5 .php7 .pht
+Header set Content-Disposition attachment
+<FilesMatch "\.(php|pl|py|jsp|sh|cgi)$">
+    ForceType text/plain
+    Order Deny,Allow
+    Deny from all
+</FilesMatch>
