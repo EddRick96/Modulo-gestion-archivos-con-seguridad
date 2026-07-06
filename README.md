@@ -24,3 +24,6 @@ La lógica principal reside en la clase `GestorArchivos` (dentro de `GestorArchi
 *   **Mitigación de Path Traversal:** En el script de eliminación, se encapsula el parámetro de entrada mediante `basename($nombre)`. Esto elimina caracteres maliciosos como `../` o `..\`, garantizando que el usuario solo borre archivos contenidos estrictamente en la carpeta objetivo.
 *   **Bloqueo por Servidor (.htaccess):** Se integra un archivo de configuración Apache dentro de `/uploads` que deshabilita los manejadores PHP. Incluso si un atacante lograse subir un archivo `.php`, el servidor web se negará rotundamente a ejecutarlo, sirviéndolo como texto plano.
 *   **Mitigación XSS en la Vista:** Toda salida de cadenas de texto proporcionadas por el ecosistema de archivos se renderiza a través de `htmlspecialchars()` evitando inyecciones de código malicioso en el navegador del cliente.
+
+## Enlace video
+[Video explicativo](https://utpl-my.sharepoint.com/:v:/g/personal/edbolanos1_utpl_edu_ec/IQC4JN-i06H5SYCN1qF4l7gLAW63hDzCiXl86XrQqiX6kPs?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=XK8MsY)
